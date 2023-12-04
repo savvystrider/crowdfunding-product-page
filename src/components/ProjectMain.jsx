@@ -15,8 +15,8 @@ export default function ProjectMain() {
         </p>
       </div>
       <div className="btn-container">
-        <button className="btn backproject-btn">Back this project</button>
-        <button className="btn bookmark-btn">Bookmark</button>
+        <button className="btn back-project-btn">Back this project</button>
+        <button className="btn bookmark-btn"></button>
       </div>
     </section>
   );

@@ -1,3 +1,10 @@
+/* GENERAL */
+
+:root {
+  --clr-greenish: #3cb3ab;
+  --clr-dark: #2f2f2f;
+}
+
 *,
 *::before,
 *::after {
@@ -8,9 +15,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: Commissioner, sans-serif;
-  background-image: url(assets/image-hero-mobile.jpg);
+  background: #fafafa url(assets/image-hero-mobile.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto 25rem;
+  background-position: center top;
 }
 
 img {
@@ -20,7 +28,6 @@ img {
 
 /* NAVIGATION */
 header {
-  /* color: white; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,6 +58,7 @@ nav ul {
   background-color: white;
   width: 80%;
   border-radius: 0.5em;
+  z-index: 100;
 }
 
 nav a {
@@ -61,4 +69,67 @@ nav a {
   display: block;
   padding: 1.5em;
   border-bottom: 1px solid rgba(46, 46, 46, 0.1);
+}
+
+/* PROJECT MAIN */
+.btn {
+  display: block;
+  cursor: pointer;
+  font-family: Commissioner, sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  border: 0;
+}
+
+.back-project-btn {
+  background-color: var(--clr-greenish);
+  color: white;
+  border-radius: 2.094em;
+  padding: 1.125em 2.563em;
+  transition: all 0.2s ease-in;
+}
+
+.bookmark-btn {
+  background: var(--clr-dark) url(assets/icon-bookmark.svg);
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.back-project-btn:hover,
+.back-project-btn:focus {
+  background-color: #147a73;
+}
+
+.project-main {
+  background-color: white;
+  max-width: 80%;
+  margin-inline: auto;
+  margin-top: 12em;
+  padding: 3em 1.5em 2.5em 1.5em;
+  border-radius: 0.5em;
+  text-align: center;
+  position: relative;
+}
+
+.project-main .img-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.project-main .btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.563em;
+  margin-top: 1.5em;
+}
+
+@media screen and (min-width: 800px) {
+  .project-main {
+    max-width: 45.625rem;
+  }
 }
