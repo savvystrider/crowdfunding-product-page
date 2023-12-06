@@ -21,6 +21,15 @@ body {
   background-position: center top;
 }
 
+@media screen and (min-width: 800px) {
+  body {
+    background: #fafafa url(assets/image-hero-desktop.jpg);
+    background-size: 100vw 50vh;
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -121,6 +130,7 @@ nav a {
   border-radius: 0.5em;
   text-align: center;
   position: relative;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.15);
 }
 
 .project-main .img-container {
@@ -159,6 +169,7 @@ nav a {
   border-radius: 0.5em;
   padding: 2em;
   text-align: center;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.15);
 }
 
 .stat {
@@ -231,5 +242,110 @@ h3 {
 
   .progress-bar {
     margin-top: 2.313em;
+  }
+}
+
+/* PROJECT ABOUT */
+.about-project {
+  background-color: white;
+  max-width: 80%;
+  margin-inline: auto;
+  margin-top: 1.5em;
+  border-radius: 0.5em;
+  padding: 2.5em 1.5em;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.15);
+}
+
+.about-project h2 {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.project-description,
+.pledge-description {
+  color: #7a7a7a;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+
+.reward {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.5em;
+  padding: 1.5em;
+  margin-block: 1.5em;
+}
+
+.reward h3 {
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  color: black;
+}
+
+.reward-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.reward-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin: 0 auto;
+}
+
+.reward-row h4 {
+  color: #7a7a7a;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.pledge {
+  color: var(--clr-greenish);
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: 0;
+}
+
+.reward-btn {
+  display: block;
+  cursor: pointer;
+  font-family: Commissioner, sans-serif;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  border: 0;
+  background-color: var(--clr-greenish);
+  color: white;
+  border-radius: 2.094em;
+  padding: 1em 2em;
+  margin-top: 2.125em;
+  transition: all 0.2s ease-in;
+}
+
+.out-of-stock-btn {
+  background-color: #2f2f2f;
+}
+
+.reward-disabled {
+  opacity: 50%;
+}
+
+@media screen and (min-width: 800px) {
+  .about-project {
+    max-width: 45.625rem;
+  }
+
+  .reward-col {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .reward-row {
+    margin: unset;
   }
 }
