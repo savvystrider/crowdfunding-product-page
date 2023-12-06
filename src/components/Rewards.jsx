@@ -16,7 +16,6 @@ export default function Rewards() {
           </div>
           <button className="reward-btn">Select Reward</button>
         </div>
-        {/* <button className="reward-btn">Select Reward</button> */}
       </article>
       <article className="reward">
         <h3>Black Edition Stand</h3>

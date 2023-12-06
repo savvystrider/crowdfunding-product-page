@@ -23,13 +23,19 @@ export default function Header() {
         <nav>
           <ul>
             <li>
-              <a href="#">About</a>
+              <a href="#" onClick={() => setNavOpen((prev) => !prev)}>
+                About
+              </a>
             </li>
             <li>
-              <a href="#">Disover</a>
+              <a href="#" onClick={() => setNavOpen((prev) => !prev)}>
+                Disover
+              </a>
             </li>
             <li>
-              <a href="#">Get Started</a>
+              <a href="#" onClick={() => setNavOpen((prev) => !prev)}>
+                Get Started
+              </a>
             </li>
           </ul>
         </nav>

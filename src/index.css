@@ -63,6 +63,18 @@ header {
   margin-left: auto;
 }
 
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 100;
+}
+
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -71,7 +83,7 @@ nav ul {
   flex-direction: column;
   gap: 0.5em;
   position: absolute;
-  top: 50%;
+  top: 0%;
   left: 50%;
   transform: translate(-50%, 2em);
   background-color: white;
@@ -177,7 +189,6 @@ nav a {
   flex-direction: column;
   gap: 0.563em;
   margin-bottom: 1.563em;
-  padding: 2.063em 6.25em;
 }
 
 .stat:nth-of-type(1),
@@ -229,7 +240,7 @@ h3 {
   }
 
   .stat {
-    padding-left: 2em;
+    padding-inline: 4em;
     margin-bottom: 0;
     text-align: left;
   }
