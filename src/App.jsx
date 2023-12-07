@@ -7,9 +7,11 @@ export default function App() {
   return (
     <>
       <Header />
-      <ProjectMain />
-      <ProjectStats />
-      <ProjectAbout />
+      <main>
+        <ProjectMain />
+        <ProjectStats />
+        <ProjectAbout />
+      </main>
     </>
   );
 }

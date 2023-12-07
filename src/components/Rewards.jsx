@@ -1,4 +1,9 @@
+import { useState } from "react";
+import BackProject from "./BackProject";
+
 export default function Rewards() {
+  const [openModal, setModalOpen] = useState(false);
+
   return (
     <div className="rewards">
       <article className="reward">
@@ -14,7 +19,12 @@ export default function Rewards() {
             <p className="statistic">101</p>
             <h4>left</h4>
           </div>
-          <button className="reward-btn">Select Reward</button>
+          <button
+            onClick={() => setModalOpen((prev) => !prev)}
+            className="reward-btn"
+          >
+            Select Reward
+          </button>
         </div>
       </article>
       <article className="reward">
@@ -29,7 +39,12 @@ export default function Rewards() {
             <p className="statistic">64</p>
             <h4>left</h4>
           </div>
-          <button className="reward-btn">Select Reward</button>
+          <button
+            onClick={() => setModalOpen((prev) => !prev)}
+            className="reward-btn"
+          >
+            Select Reward
+          </button>
         </div>
       </article>
       <article className="reward reward-disabled">
@@ -48,6 +63,7 @@ export default function Rewards() {
           <button className="reward-btn out-of-stock-btn">Out of stock</button>
         </div>
       </article>
+      {openModal && <BackProject setModalOpen={setModalOpen} />}
     </div>
   );
 }

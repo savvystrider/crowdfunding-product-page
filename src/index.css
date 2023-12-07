@@ -196,14 +196,15 @@ nav a {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-h3 {
+.stat h3 {
   color: #7a7a7a;
   font-size: 0.875rem;
   font-weight: 400;
   margin-top: 0.563em;
 }
 
-.statistic {
+.reward-row .statistic,
+.quantity {
   order: -1;
   font-size: 2rem;
   font-weight: 700;
@@ -287,7 +288,8 @@ h3 {
   margin-block: 1.5em;
 }
 
-.reward h3 {
+.reward h3,
+label {
   font-size: 0.875rem;
   font-weight: 700;
   margin-top: 0;
@@ -307,13 +309,15 @@ h3 {
   margin: 0 auto;
 }
 
-.reward-row h4 {
+.reward-row h4,
+.quantity-row h4 {
   color: #7a7a7a;
   font-size: 0.875rem;
   font-weight: 400;
 }
 
-.pledge {
+.reward .pledge,
+.pledge-info {
   color: var(--clr-greenish);
   font-size: 0.875rem;
   font-weight: 500;
@@ -358,5 +362,63 @@ h3 {
 
   .reward-row {
     margin: unset;
+  }
+}
+
+/* BACK PROJECT MODAL */
+.back-project {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 100;
+}
+
+.modal-container {
+  max-width: 80%;
+  margin-inline: auto;
+  background-color: white;
+  padding: 1.5em 2em;
+  position: relative;
+}
+
+.modal-container .pledge {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.5em;
+  margin-block: 1.5em;
+  padding: 1.5em 2em;
+}
+
+.modal-container .pledge-info {
+  margin-bottom: 0;
+  margin-top: 0.5em;
+}
+
+.pledge-row {
+  display: flex;
+  align-items: baseline;
+  gap: 1em;
+}
+
+.close-modal-icon {
+  cursor: pointer;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+
+.quantity-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+@media screen and (min-width: 800px) {
+  .modal-container {
+    max-width: 45.625rem;
   }
 }
