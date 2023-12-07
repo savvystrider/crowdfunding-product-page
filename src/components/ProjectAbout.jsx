@@ -1,6 +1,6 @@
 import Rewards from "./Rewards";
 
-export default function ProjectAbout() {
+export default function ProjectAbout({ openModal, setModalOpen }) {
   return (
     <section className="about-project">
       <h2>About this project</h2>
@@ -16,7 +16,7 @@ export default function ProjectAbout() {
         desk space below your computer to allow notepads, pens, and USB sticks
         to be stored under the stand.
       </p>
-      <Rewards />
+      <Rewards openModal={openModal} setModalOpen={setModalOpen} />
     </section>
   );
 }

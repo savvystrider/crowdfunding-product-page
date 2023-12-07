@@ -1,4 +1,4 @@
-export default function ProjectMain() {
+export default function ProjectMain({ setModalOpen }) {
   return (
     <section className="project-main">
       <div className="img-container">
@@ -15,7 +15,12 @@ export default function ProjectMain() {
         </p>
       </div>
       <div className="btn-container">
-        <button className="btn back-project-btn">Back this project</button>
+        <button
+          className="btn back-project-btn"
+          onClick={() => setModalOpen((prev) => !prev)}
+        >
+          Back this project
+        </button>
         <button className="btn bookmark-btn"></button>
       </div>
     </section>

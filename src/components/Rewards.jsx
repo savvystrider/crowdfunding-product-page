@@ -1,9 +1,6 @@
-import { useState } from "react";
 import BackProject from "./BackProject";
 
-export default function Rewards() {
-  const [openModal, setModalOpen] = useState(false);
-
+export default function Rewards({ openModal, setModalOpen }) {
   return (
     <div className="rewards">
       <article className="reward">
