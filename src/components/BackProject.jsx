@@ -24,7 +24,12 @@ export default function BackProject({ setModalOpen }) {
           <div className="pledge-container">
             <div className="pledge">
               <div className="pledge-row">
-                <input type="radio" name="reward" id="no-reward" />
+                <input
+                  type="radio"
+                  name="reward"
+                  id="no-reward"
+                  onClick={() => setOpenPledge((prev) => !prev)}
+                />
                 <label htmlFor="no-reward">Pledge with no reward</label>
               </div>
               <p className="pledge-description">
@@ -32,6 +37,19 @@ export default function BackProject({ setModalOpen }) {
                 our project. As a backer, you will be signed up to receive
                 product updates via email.
               </p>
+              {openPledge && (
+                <div className="enter-pledge">
+                  <h5>We appreciate your support.</h5>
+                  <div className="input-container">
+                    <button
+                      className="btn continue-btn"
+                      onClick={() => setShowSuccess(true)}
+                    >
+                      Continue
+                    </button>
+                  </div>
+                </div>
+              )}
             </div>
             <div className="pledge">
               <div className="pledge-row">
