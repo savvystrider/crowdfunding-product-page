@@ -103,7 +103,9 @@ nav a {
 }
 
 /* PROJECT MAIN */
-.btn {
+.btn,
+.enter-pledge .input-container .btn,
+.success-modal .btn {
   display: block;
   cursor: pointer;
   font-family: Commissioner, sans-serif;
@@ -113,7 +115,9 @@ nav a {
   border: 0;
 }
 
-.back-project-btn {
+.back-project-btn,
+.enter-pledge .input-container .btn,
+.success-modal .btn {
   background-color: var(--clr-greenish);
   color: white;
   border-radius: 2.094em;
@@ -203,6 +207,7 @@ nav a {
   margin-top: 0.563em;
 }
 
+.stat .statistic,
 .reward-row .statistic,
 .quantity {
   order: -1;
@@ -376,13 +381,17 @@ label {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.25);
   z-index: 100;
+  overflow-y: auto;
 }
 
-.modal-container {
+.modal-container,
+.success-modal {
   max-width: 80%;
   margin-inline: auto;
   background-color: white;
   padding: 1.5em 2em;
+  border-radius: 0.5em;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.15);
   position: relative;
 }
 
@@ -396,6 +405,10 @@ label {
 .modal-container .pledge-info {
   margin-bottom: 0;
   margin-top: 0.5em;
+}
+
+.pledge:last-of-type {
+  opacity: 50%;
 }
 
 .pledge-row {
@@ -417,8 +430,44 @@ label {
   gap: 0.5em;
 }
 
+.enter-pledge {
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.enter-pledge .input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.enter-pledge input {
+  display: inline-block;
+  border-radius: 2.094em;
+  max-width: 6.25rem;
+  height: 3.438rem;
+  text-align: center;
+  font-family: inherit;
+  font-weight: bold;
+}
+
+.success-modal {
+  text-align: center;
+  line-height: 1.5;
+}
+
+.success-modal img {
+  margin: 0 auto;
+}
+
+.success-modal .btn {
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 800px) {
-  .modal-container {
+  .modal-container,
+  .success-modal {
     max-width: 45.625rem;
   }
 }

@@ -29,7 +29,7 @@ export default function Header() {
             </li>
             <li>
               <a href="#" onClick={() => setNavOpen((prev) => !prev)}>
-                Disover
+                Discover
               </a>
             </li>
             <li>
