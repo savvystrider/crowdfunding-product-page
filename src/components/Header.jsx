@@ -47,7 +47,7 @@ export default function Header() {
 
   return (
     <header>
-      <img src="assets/logo.svg" alt="CrowdFund Logo" className="logo" />
+      <img src="/assets/logo.svg" alt="CrowdFund Logo" className="logo" />
       <button
         className="nav-toggle"
         aria-label="toggle navigation"
@@ -56,7 +56,7 @@ export default function Header() {
         onClick={handleNav}
       >
         <img
-          src="assets/icon-hamburger.svg"
+          src="/assets/icon-hamburger.svg"
           alt=""
           className="hamburger-icon"
         />

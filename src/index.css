@@ -15,7 +15,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Commissioner, sans-serif;
-  background: #fafafa url(assets/image-hero-mobile.jpg);
+  background: #fafafa url(/assets/image-hero-mobile.jpg);
   background-repeat: no-repeat;
   background-size: auto 25rem;
   background-position: center top;
@@ -23,7 +23,7 @@ body {
 
 @media screen and (min-width: 800px) {
   body {
-    background: #fafafa url(assets/image-hero-desktop.jpg);
+    background: #fafafa url(/assets/image-hero-desktop.jpg);
     background-size: 100vw 50vh;
     background-repeat: no-repeat;
     background-position: top center;

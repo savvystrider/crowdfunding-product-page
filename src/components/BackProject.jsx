@@ -11,7 +11,7 @@ export default function BackProject({ setModalOpen }) {
       {!showSuccess ? (
         <div className="modal-container">
           <img
-            src="assets/icon-close-modal.svg"
+            src="/assets/icon-close-modal.svg"
             alt=""
             className="close-modal-icon"
             onClick={() => setModalOpen((prev) => !prev)}
@@ -148,7 +148,7 @@ export default function BackProject({ setModalOpen }) {
       ) : (
         <div className="success-modal">
           <img
-            src="assets/icon-check.svg"
+            src="/assets/icon-check.svg"
             alt="checkmark illustration"
             className="checkmark"
           />
