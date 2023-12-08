@@ -159,7 +159,7 @@ nav a {
 }
 
 .bookmark-btn {
-  background: var(--clr-dark) url(assets/icon-bookmark.svg);
+  background: var(--clr-dark) url(/assets/icon-bookmark.svg);
   border-radius: 50%;
   width: 3.5rem;
   height: 3.5rem;
