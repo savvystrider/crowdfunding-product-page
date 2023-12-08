@@ -148,7 +148,6 @@ nav a {
   border: 0;
 }
 
-.back-project-btn,
 .enter-pledge .input-container .btn,
 .success-modal .btn {
   background-color: var(--clr-greenish);
@@ -156,6 +155,13 @@ nav a {
   border-radius: 2.094em;
   padding: 1.125em 2.563em;
   transition: all 0.2s ease-in;
+}
+
+.back-project-btn {
+  background-color: var(--clr-greenish);
+  color: white;
+  border-radius: 2.094em;
+  padding: 1em 2em;
 }
 
 .bookmark-btn {
@@ -473,6 +479,7 @@ label {
   justify-content: center;
   align-items: center;
   gap: 1em;
+  transform: scale(0.8);
 }
 
 .enter-pledge input {
@@ -483,6 +490,7 @@ label {
   text-align: center;
   font-family: inherit;
   font-weight: bold;
+  flex: 1;
 }
 
 .success-modal {
@@ -502,5 +510,9 @@ label {
   .modal-container,
   .success-modal {
     max-width: 45.625rem;
+  }
+
+  .enter-pledge .input-container {
+    transform: unset;
   }
 }

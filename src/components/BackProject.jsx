@@ -6,6 +6,11 @@ export default function BackProject({ setModalOpen }) {
   const [openPledgeBlack, setOpenPledgeBlack] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
 
+  function handleModal() {
+    setShowSuccess(false);
+    setModalOpen(false);
+  }
+
   return (
     <section className="back-project">
       {!showSuccess ? (
@@ -158,10 +163,7 @@ export default function BackProject({ setModalOpen }) {
             Monitor Riser worldwide. You will get an email once our campaign is
             completed.
           </p>
-          <button
-            className="btn success-btn"
-            onClick={() => setShowSuccess(false)}
-          >
+          <button className="btn success-btn" onClick={handleModal}>
             Got it!
           </button>
         </div>
