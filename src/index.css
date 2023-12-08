@@ -102,6 +102,39 @@ nav a {
   border-bottom: 1px solid rgba(46, 46, 46, 0.1);
 }
 
+.desktop-nav {
+  display: none;
+}
+
+@media screen and (min-width: 800px) {
+  .desktop-nav {
+    display: block;
+  }
+
+  nav {
+    position: unset;
+    background-color: transparent;
+  }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2em;
+    border-radius: unset;
+    background-color: transparent;
+  }
+
+  nav a {
+    color: white;
+    padding: unset;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+}
+
 /* PROJECT MAIN */
 .btn,
 .enter-pledge .input-container .btn,

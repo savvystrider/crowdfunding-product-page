@@ -7,6 +7,44 @@ export default function Header() {
     setNavOpen((prev) => !prev);
   }
 
+  const mobileNav = (
+    <nav>
+      <ul>
+        <li>
+          <a href="#" onClick={() => setNavOpen((prev) => !prev)}>
+            About
+          </a>
+        </li>
+        <li>
+          <a href="#" onClick={() => setNavOpen((prev) => !prev)}>
+            Discover
+          </a>
+        </li>
+        <li>
+          <a href="#" onClick={() => setNavOpen((prev) => !prev)}>
+            Get Started
+          </a>
+        </li>
+      </ul>
+    </nav>
+  );
+
+  const desktopNav = (
+    <nav className="desktop-nav">
+      <ul>
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#">Discover</a>
+        </li>
+        <li>
+          <a href="#">Get Started</a>
+        </li>
+      </ul>
+    </nav>
+  );
+
   return (
     <header>
       <img src="assets/logo.svg" alt="CrowdFund Logo" className="logo" />
@@ -17,29 +55,14 @@ export default function Header() {
         aria-controls="menu"
         onClick={handleNav}
       >
-        <img src="assets/icon-hamburger.svg" alt="" />
+        <img
+          src="assets/icon-hamburger.svg"
+          alt=""
+          className="hamburger-icon"
+        />
       </button>
-      {navOpen && (
-        <nav>
-          <ul>
-            <li>
-              <a href="#" onClick={() => setNavOpen((prev) => !prev)}>
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#" onClick={() => setNavOpen((prev) => !prev)}>
-                Discover
-              </a>
-            </li>
-            <li>
-              <a href="#" onClick={() => setNavOpen((prev) => !prev)}>
-                Get Started
-              </a>
-            </li>
-          </ul>
-        </nav>
-      )}
+      {navOpen && mobileNav}
+      {desktopNav}
     </header>
   );
 }
